@@ -1,0 +1,21 @@
+http://hyperledger-fabric.readthedocs.io/en/latest/blockchain.html
+
+Hyperledger Fabric:
+	- private
+	- permissioned
+	- members enroll via Membership Service Provider (MSP)
+	- ledger data can be stored in multiple formats
+	- swappable consensus mechanisms
+	- different MSPs supported
+	- channels can be created amont participants (separate ledger transactions)
+
+Ledger has two components:
+	- world state: describes state of ledger at given point 
+	- transaction log: records all transactions which resulted in current value of world state
+
+NOTE: each particiapnt has a copy of the ledger to every Hyperledger Fabric network they belong to
+      replaceble world state data store (LevelDB).
+
+Smart contract:  written in chaincode.  Invoked by application external to blockchain.
+                 most cases, cahincode interacts with database component of ledger (querying it)
+		 chaincode implemented in go and node.
